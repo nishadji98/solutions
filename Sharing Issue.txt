@@ -1,0 +1,39 @@
+[Fix Network Error Code 0x800704f8 In Windows 11 24H2 – YouTube Tutorial](https://www.youtube.com/watch?v=FakGq6WXLTs&utm_source=chatgpt.com)
+
+Here’s a rough transcript of the video, complete with timestamps:
+
+---
+
+**00:00**
+Welcome! In today’s tutorial, I’ll show you how to fix the network error code **0x800704f8** in Windows 11 version 24H2.
+
+**00:12 – Edit Group Policy Settings**
+
+1. Press `Win + R`, type `gpedit.msc`, hit Enter.
+2. Navigate to **Computer Configuration → Administrative Templates → Network → QoS Packet Scheduler**.
+3. Locate **“Limit reservable bandwidth”**.
+4. Double‑click it, set to **Enabled**, and change bandwidth limit to **0%**.
+5. Click **Apply** and **OK**.
+
+**01:16 – Change Local Group Policy Registry (alternative)**
+*(If gpedit is unavailable)*
+
+1. Press `Win + R`, type `regedit`, press Enter.
+2. Go to `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Psched`.
+3. Create a new **DWORD (32-bit)** value named **“NonBestEffortLimit”**.
+4. Set its value data to **0**.
+5. Close Registry Editor and restart your PC.
+
+**02:10 – Run Network Reset**
+
+1. Go to **Settings → Network & Internet → Advanced network settings**.
+2. Select **Network reset**, then click **Reset now**.
+3. Confirm and let Windows restart.
+
+**03:05 – Wrap Up**
+Once your PC restarts, test your network. The **0x800704f8** error should be resolved. If not, recheck the steps, especially the Group Policy or registry edits.
+Don’t forget to like and subscribe!
+
+---
+
+Let me know if you'd like a deeper explanation of any step!
